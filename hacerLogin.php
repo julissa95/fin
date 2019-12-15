@@ -36,7 +36,7 @@ if($Bandera==0)
 fclose($archivo); */
 
 // Se conecta al SGBD 
-  if(!($iden =  mysqli_connect("https://remotemysql.com/", "mwO9Zlr57D", "Hrro5b42Xl","mwO9Zlr57D"))) 
+  if(!($iden =  mysqli_connect("remotemysql.com", "mwO9Zlr57D", "Hrro5b42Xl","mwO9Zlr57D"))) 
     die("Error: No se pudo conectar");
 	
   // Selecciona la base de datos 
