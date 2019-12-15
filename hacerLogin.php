@@ -36,15 +36,17 @@ if($Bandera==0)
 fclose($archivo); */
 
 // Se conecta al SGBD 
+$echo("aca paso antes mysqli");
   if(!($iden =  mysqli_connect("remotemysql.com", "mwO9Zlr57D", "Hrro5b42Xl","mwO9Zlr57D"))) 
     die("Error: No se pudo conectar");
 	
   // Selecciona la base de datos 
  
-	
+	$echo("aca paso despues mysqli");
   // Sentencia SQL: muestra todo el contenido de la tabla "books" 
   $sentencia = "SELECT * FROM usuario where nombre='$checkUsuario' and clave='$checkPassword'"; 
   // Ejecuta la sentencia SQL 
+  $echo("aca paso despues la consulta mysqli");
   $resultado = mysqli_query($iden,$sentencia); 
   $count = $resultado->num_rows;
   if($count<=0) {
